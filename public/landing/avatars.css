@@ -1,0 +1,348 @@
+.avatars-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Common avatar styles */
+.avatar {
+    width: 40px;
+    height: 60px;
+    margin: 0 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Avatar head (the circular part) */
+.avatar::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 0;
+    border: 2px solid black;
+    
+}
+
+/* Avatar body (the bottom part) */
+.avatar::after {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 17px;
+    bottom: 0;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 50%;
+    
+}
+
+/* Red avatar */
+.avatar.red::before {
+    background-color: #ff4c4c;
+    border: 2px solid black;
+}
+
+.avatar.red::after {
+    background-color: #ff4c4c;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Orange avatar */
+.avatar.orange::before {
+    background-color: #ff8c4c;
+    border: 2px solid black;
+}
+
+.avatar.orange::after {
+    background-color: #ff8c4c;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Yellow avatar */
+.avatar.yellow::before {
+    background-color: #ffee4c;
+    border: 2px solid black;
+}
+
+.avatar.yellow::after {
+    background-color: #ffee4c;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Green avatar */
+.avatar.green::before {
+    background-color: #4cff4c;
+    border: 2px solid black;
+}
+
+.avatar.green::after {
+    background-color: #4cff4c;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Cyan avatar */
+.avatar.cyan::before {
+    background-color: #4cffee;
+    border: 2px solid black;
+}
+
+.avatar.cyan::after {
+    background-color: #4cffee;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Blue avatar */
+.avatar.blue::before {
+    background-color: #4c4cff;
+    border: 2px solid black;
+}
+
+.avatar.blue::after {
+    background-color: #4c4cff;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Purple avatar */
+.avatar.purple::before {
+    background-color: #b54cff;
+    border: 2px solid black;
+}
+
+.avatar.purple::after {
+    background-color: #b54cff;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Pink avatar */
+.avatar.pink::before {
+    background-color: #ff4cb5;
+    border: 2px solid black;
+}
+
+.avatar.pink::after {
+    background-color: #ff4cb5;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Avatar eyes - default style */
+.avatar .eyes {
+    position: absolute;
+    width: 30px;
+    height: 12px;
+    top: 15px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Avatar eyes - individual eye */
+.avatar .eyes::before,
+.avatar .eyes::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* Avatar mouth - default style */
+.avatar .mouth {
+    position: absolute;
+    top: 25px;
+    width: 20px;
+    height: 8px;
+    z-index: 2;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* Avatar specific styles */
+/* Red avatar - shocked/angry */
+.avatar.red .mouth {
+    width: 16px;
+    height: 12px;
+    border-radius: 8px;
+}
+
+/* Orange avatar - concerned */
+.avatar.orange .mouth {
+    width: 16px;
+    height: 4px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transform: translateY(4px);
+}
+
+/* Yellow avatar - vampire teeth */
+.avatar.yellow .mouth {
+    width: 16px;
+    height: 6px;
+    position: relative;
+}
+.avatar.yellow .mouth::before,
+.avatar.yellow .mouth::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    bottom: 0;
+}
+.avatar.yellow .mouth::before {
+    left: 3px;
+}
+.avatar.yellow .mouth::after {
+    right: 3px;
+}
+
+/* Green avatar - big smile */
+.avatar.green .mouth {
+    width: 20px;
+    height: 10px;
+    border-radius: 0 0 10px 10px;
+}
+.avatar.green .eyes::before,
+.avatar.green .eyes::after {
+    height: 6px;
+    border-radius: 6px 6px 0 0;
+}
+
+/* Cyan avatar - sad */
+.avatar.cyan .mouth {
+    width: 16px;
+    height: 8px;
+    border-radius: 8px 8px 0 0;
+    transform: translateY(4px) rotate(180deg);
+}
+
+/* Blue avatar - frustrated */
+.avatar.blue .mouth {
+    width: 16px;
+    height: 4px;
+    border-radius: 4px;
+}
+.avatar.blue .eyes::before,
+.avatar.blue .eyes::after {
+    height: 8px;
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+
+/* Purple avatar - happy with crown */
+/* .avatar.purple .mouth {
+    width: 16px;
+    height: 8px;
+    border-radius: 0 0 8px 8px;
+}
+.avatar.purple::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background-color: gold;
+    top: -8px;
+    clip-path: polygon(0% 100%, 20% 60%, 40% 100%, 60% 60%, 80% 100%, 100% 60%, 100% 100%);
+    z-index: 2;
+} */
+
+/* Pink avatar - grinning */
+.avatar.pink .mouth {
+    width: 20px;
+    height: 8px;
+    border-radius: 0 0 10px 10px;
+}
+.avatar.pink .eyes::before,
+.avatar.pink .eyes::after {
+    transform: scale(1.2);
+}
+
+/* Selected avatar in the avatar selector */
+.selected-avatar {
+    width: 80px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.selected-avatar::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--avatar-color, #4cffee);
+    top: 0;
+    border: 3px solid black;
+}
+
+.selected-avatar::after {
+    content: '';
+    position: absolute;
+    width: 84px;
+    height: 34px;
+    background-color: var(--avatar-color, #4cffee);
+    bottom: 0;
+    
+    border-top: 3px solid black;
+    border-radius: 50%;
+    top: 70px;
+}
+
+.selected-avatar .eyes {
+    position: absolute;
+    width: 45px;
+    height: 19px;
+    top: 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.selected-avatar .eyes::before,
+.selected-avatar .eyes::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.selected-avatar .mouth {
+    position: absolute;
+    top: 43px;
+    width: 40px;
+    height: 16px;
+    z-index: 2;
+    background-color: black;
+    border-radius: 10px;
+}
+

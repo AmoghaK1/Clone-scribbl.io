@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skribbl.io - Free Multiplayer Drawing & Guessing Game</title>
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="avatars.css">
+    <link rel="icon" type="favicon" href="../Images/favicon.svg">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="logo-container">
+            <div class="logo-placeholder">
+                <img src="../Images/logo-gif.gif">
+            </div>
+        </div>
+        
+        <div class="avatars-container">
+            <div class="avatar red">
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="avatar orange">
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="avatar yellow">
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="avatar green" >
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="avatar cyan">
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="avatar blue">
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="avatar purple">
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="avatar pink">
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+            </div>
+        </div>
+        
+        <div class="game-form">
+            <div class="input-container">
+                <input type="text" class="name-input" placeholder="Enter your name">
+            </div>
+            
+            <div class="avatar-selector">
+                <div class="avatar-controls">
+                    <div class="avatar-arrow">&#8249;</div>
+                    <div class="avatar-arrow">&#8249;</div>
+                </div>
+                
+                <div class="selected-avatar">
+                    <div class="eyes"></div>
+                    <div class="mouth"></div>
+                </div>
+                
+                <div class="avatar-controls">
+                    <div class="avatar-arrow">&#8250;</div>
+                    <div class="avatar-arrow">&#8250;</div>
+                </div>
+                
+                <button class="random-avatar">&#10052;</button>
+            </div>
+            
+            <div class="buttons-container">
+                <button id="create-lobby-btn">Create Room</button>
+                <button id="join-lobby-btn">Join Room</button>
+                <div class="room-id-container" style="display: none;">
+                    <input type="text" class="room-id-input" placeholder="Enter Room ID">
+                    <button id="confirm-join-btn">Join</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script src="landing.js"></script>
+
+</body>
+</html>
